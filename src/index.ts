@@ -5,7 +5,7 @@
  * Deno, Cloudflare Workers and browsers.
  */
 
-export const VERSION = "0.1.0";
+export const VERSION = "0.1.1";
 
 const DEFAULT_BASE_URL = "https://animeapi.ai";
 const DEFAULT_TIMEOUT_MS = 120_000;
@@ -73,7 +73,7 @@ export interface GenerateImageParams {
   orientation?: Orientation;
   /** `anime` model only: rewrite the prompt into tags first. Default true. */
   enhance?: boolean;
-  /** `anime` model only: whether adult output is allowed. API default true; send false for anything shown publicly. */
+  /** @deprecated Ignored by the API; adult output is not available. Kept so existing code compiles. */
   allowNSFW?: boolean;
 }
 
@@ -480,7 +480,6 @@ export class Images {
     if (p.model !== undefined) body.model = p.model;
     if (p.orientation !== undefined) body.orientation = p.orientation;
     if (p.enhance !== undefined) body.enhance = p.enhance;
-    if (p.allowNSFW !== undefined) body.allowNSFW = p.allowNSFW;
     const raw = await this.#client.request<any>("POST", "/api/generate", body, options);
     return {
       imageUrl: raw.image_url,

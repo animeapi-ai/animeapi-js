@@ -1,6 +1,6 @@
 {
   "name": "@animeapi/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official AnimeAPI SDK: anime image generation from $0.003 per image, plus anime video. Zero dependencies; Node 18+, Bun, Deno, Cloudflare Workers and browsers.",
   "keywords": ["anime", "image-generation", "ai", "api", "sdk", "animeapi", "text-to-image", "text-to-video", "anime-art", "discord-bot"],
   "homepage": "https://animeapi.ai",
