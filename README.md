@@ -42,7 +42,7 @@ const image = await client.images.generate({
   enhance: true,             // anime model: rewrite the prompt into tags (default true)
 });
 
-image.imageUrl;          // https://animeapi.ai/cdn/...
+image.imageUrl;          // https://animeapi.ai/i/….webp
 image.enhancedPrompt;    // what the model actually received
 image.balanceUsd;        // balance after this charge
 image.generationTimeMs;  // about 4 s on anime, about 11 s on ultra

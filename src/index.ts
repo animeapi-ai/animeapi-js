@@ -78,7 +78,7 @@ export interface GenerateImageParams {
 }
 
 export interface GeneratedImage {
-  /** Temporary URL on animeapi.ai/cdn. Download the image if you need to keep it. */
+  /** Temporary URL of the form https://animeapi.ai/i/<id>.<ext>. Download the image if you need to keep it. */
   imageUrl: string;
   /** What the model actually received. */
   enhancedPrompt: string;
