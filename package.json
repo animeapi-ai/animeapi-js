@@ -1,11 +1,25 @@
 {
   "name": "@animeapi/sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Official AnimeAPI SDK: anime image generation from $0.003 per image, plus anime video. Zero dependencies; Node 18+, Bun, Deno, Cloudflare Workers and browsers.",
-  "keywords": ["anime", "image-generation", "ai", "api", "sdk", "animeapi", "text-to-image", "text-to-video", "anime-art", "discord-bot"],
+  "keywords": [
+    "anime",
+    "image-generation",
+    "ai",
+    "api",
+    "sdk",
+    "animeapi",
+    "text-to-image",
+    "text-to-video",
+    "anime-art",
+    "discord-bot"
+  ],
   "homepage": "https://animeapi.ai",
   "bugs": "https://github.com/animeapi-ai/animeapi-js/issues",
-  "repository": { "type": "git", "url": "git+https://github.com/animeapi-ai/animeapi-js.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/animeapi-ai/animeapi-js.git"
+  },
   "license": "MIT",
   "author": "AnimeAPI <contact@animeapi.ai> (https://animeapi.ai)",
   "type": "module",
@@ -15,13 +29,25 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
-      "require": { "types": "./dist/index.d.cts", "default": "./dist/index.cjs" }
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist", "README.md", "LICENSE"],
-  "engines": { "node": ">=18" },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean --target es2020",
     "typecheck": "tsc --noEmit",

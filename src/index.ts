@@ -5,7 +5,7 @@
  * Deno, Cloudflare Workers and browsers.
  */
 
-export const VERSION = "0.1.1";
+export const VERSION = "0.1.2";
 
 const DEFAULT_BASE_URL = "https://animeapi.ai";
 const DEFAULT_TIMEOUT_MS = 120_000;
